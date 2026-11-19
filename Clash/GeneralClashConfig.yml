@@ -64,6 +64,7 @@ experimental:
 
 dns:
   enable: true # 启用 dns
+  prefer-h3: true
   ipv6: true # DNS 解析 IPv6(AAAA) 记录，顶层 ipv6 不会自动开启这个
   enhanced-mode: fake-ip # 模式：redir-host 或 fake-ip
   fake-ip-range: 198.18.0.1/16
