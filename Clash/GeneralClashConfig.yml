@@ -62,6 +62,26 @@ experimental:
 #   '*.clash.dev': 127.0.0.1
 #   'alpha.clash.dev': '::1'
 
+dns:
+  enable: true # 启用 dns
+  ipv6: true # DNS 解析 IPv6(AAAA) 记录，顶层 ipv6 不会自动开启这个
+  enhanced-mode: fake-ip # 模式：redir-host 或 fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter: # fake ip 白名单列表，如果你不知道这个参数的作用，请勿修改
+    - '*.lan'
+    - '+.local'
+    - localhost.ptlogin2.qq.com
+    - '+.msftconnecttest.com'
+    - '+.msftncsi.com'
+  default-nameserver: # 仅用于解析下面 DoH 服务器自身的域名，必须是 IP
+    - 223.5.5.5 # 阿里DNS
+    - 119.29.29.29 # 腾讯DNS
+  nameserver:
+    - https://cloudflare-dns/dns-query
+    - tls://one.one.one.one
+  proxy-server-nameserver: # 解析代理节点域名用
+    - https://dns.alidns.com/dns-query
+
 #dns:
   #enable: true # 是否启用dns false
   #ipv6: false
