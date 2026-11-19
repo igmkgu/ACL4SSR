@@ -77,7 +77,7 @@ dns:
     - 223.5.5.5 # 阿里DNS
     - 119.29.29.29 # 腾讯DNS
   nameserver:
-    - https://cloudflare-dns/dns-query
+    - https://cloudflare-dns.com/dns-query
     - tls://one.one.one.one
   proxy-server-nameserver: # 解析代理节点域名用
     - https://dns.alidns.com/dns-query
